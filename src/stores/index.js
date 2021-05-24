@@ -58,7 +58,7 @@ export function reducer(state, action) {
                 }
             }
 
-            annotations = state.annotations;
+            annotations = Object.assign({}, state.annotations);
             annotations[state.selected.id]
                 ? annotations[state.selected.id].push(annotation)
                 : annotations[state.selected.id] = [annotation];
@@ -72,7 +72,7 @@ export function reducer(state, action) {
             annotations = state.annotations;
             annotations[action.annotation.category.id][action.index].hidden = !annotations[action.annotation.category.id][action.index].hidden;
             return { ...state, annotations }
-        case 'toogle_all_annotation_visibility':
+        case 'toggle_all_annotation_visibility':
             return state.showOnly
                 ? { ...state, showOnly: null }
                 : { ...state, showOnly: { category: action.annotation.category.id, index: action.index } }

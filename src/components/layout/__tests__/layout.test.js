@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from "enzyme";
+import { shallow } from "enzyme";
 import Badge from '../badge';
 
 describe('Layout', () => {
@@ -12,4 +12,3 @@ describe('Layout', () => {
         expect(wrapper.contains(<div className="unique" />)).toEqual(true);
     })
 });
-

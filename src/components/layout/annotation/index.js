@@ -26,8 +26,8 @@ const Annotation = ({ category, annotations, open, index, dispatch }) => {
                             icon={
                                 <Icon
                                     style={{ color: "white" }}
-                                    onMouseEnter={() => dispatch({ type: "toogle_all_annotation_visibility", index, annotation })}
-                                    onMouseLeave={() => dispatch({ type: "toogle_all_annotation_visibility", index, annotation })}
+                                    onMouseEnter={() => dispatch({ type: "toggle_all_annotation_visibility", index, annotation })}
+                                    onMouseLeave={() => dispatch({ type: "toggle_all_annotation_visibility", index, annotation })}
                                 >
                                     {annotation.hidden ? "visibility_off" : "visibility"}
                                 </Icon>
