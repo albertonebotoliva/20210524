@@ -10,7 +10,7 @@ const styles = theme => ({
     }
 });
 
-const SimpleBadge = (props) => {
+const CustomBadge = (props) => {
     const { classes } = props;
     return (
         <div>
@@ -24,13 +24,13 @@ const SimpleBadge = (props) => {
     );
 }
 
-SimpleBadge.propTypes = {
+CustomBadge.propTypes = {
     props: PropTypes.object
 };
 
-SimpleBadge.defaultProps = {
+CustomBadge.defaultProps = {
     props: {}
 };
 
 
-export default withStyles(styles)(SimpleBadge);
+export default withStyles(styles)(CustomBadge);
